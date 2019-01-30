@@ -16,6 +16,6 @@ class Author
     new_post.author = self
   end
   def self.post_count
-    @@all.collect {|author| artist.songs.length}.reduce(0, :+)
+    @@all.collect {|author| author.posts.length}.reduce(0, :+)
   end
 end

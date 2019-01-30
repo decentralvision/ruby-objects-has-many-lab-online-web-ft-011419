@@ -5,5 +5,6 @@ class Author
     @posts = []
   end
   def add_post(title)
+    @posts << Post.new(title)
   end
 end

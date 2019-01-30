@@ -8,12 +8,12 @@ class Author
   end
   def add_post(post)
     @posts << post
-    post.author_name = self
+    post.author = self
   end
   def add_post_by_title(title)
     new_post = Post.new(title)
     @posts << new_post
-    new_post.author_name = self
+    new_post.author = self
   end
   def self.post_count
     @@all.collect {|author| author.posts.length}.reduce(0, :+)

@@ -16,6 +16,6 @@ class Artist
     new_song.artist = self
   end
   def self.song_count
-    @@all.collect {|artist| artist.songs.length}.sum
+    @@all.collect {|artist| artist.songs.length}.inject(0, :+)
   end
 end

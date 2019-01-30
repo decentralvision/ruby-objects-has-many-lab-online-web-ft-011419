@@ -4,7 +4,13 @@ class Author
     @name = name
     @posts = []
   end
-  def add_post(title)
-    @posts << Post.new(title)
+  def add_post(post)
+    @posts << post
+    post.artist = self
   end
+  def add_post_by_title(title)
+    new_post = Post.new(title)
+
+    @posts << new_post
+
 end

@@ -16,6 +16,6 @@ class Artist
     new_song.artist = self
   end
   def self.song_count
-    @@all.collect {|artist| artist.songs.length}.reduce(0, :+)
+    @@all.collect {|artist| artist.songs}.count
   end
 end

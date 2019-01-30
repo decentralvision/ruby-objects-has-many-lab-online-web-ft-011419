@@ -1,5 +1,6 @@
 class Author
   attr_accessor :name, :posts
+  @@all = []
   def initialize(name)
     @name = name
     @posts = []
@@ -14,5 +15,6 @@ class Author
     new_post.author = self
   end
   def self.post_count
+    @@all.collect {|author| artist.songs.length}.reduce(0, :+)
   end
 end
